@@ -25,7 +25,7 @@ function inicio(){
          objeto.forEach(recorrer);
          function recorrer(fruta,indice){
             console.log("entro en bucle")
-           
+           console.log("fruta"+fruta);
            const vector=[fruta.id,fruta.name,fruta.price,fruta.photo];
            console.log(vector);
            bloqueHtml.innerHTML+="<div class='row'>"+
@@ -41,7 +41,7 @@ function inicio(){
            "<div class='col-lg-2 text-center'><a href=javascript:void(0) "+
            "class='btn btn-danger btn-md' onclick=eliminar("+fruta.id+")>Eliminar</a></div>"+
            "<div class='col-lg-2 text-center'><a href=javascript:void(0) "+
-           "class='btn btn-danger btn-md' onclick=Modificar("+fruta+")>Modificar </a></div></div>";
+           "class='btn btn-info btn-md' onclick=modificar('"+vector+"')>Modificar </a></div></div>";
          }
        }
     }
@@ -61,5 +61,6 @@ function eliminar(id){
     console.log("item para eliminar"+id);
 }
 function modificar(fruta){
+    console.log("modificar :"+fruta);
 
 }
